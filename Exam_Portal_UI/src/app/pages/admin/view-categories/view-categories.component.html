@@ -1,0 +1,19 @@
+<mat-card>
+    <mat-list>
+        <mat-card-header>
+            <mat-card-title>All Categories</mat-card-title>
+
+        </mat-card-header>
+        <mat-list-item *ngFor="let c of categoriesJson; let i= index">
+            
+            <div class="mr20">{{(i + 1)+') ' +c.title}}</div>
+            <mat-card-subtitle>{{c.description}}</mat-card-subtitle>
+            <mat-divider [inset]="true"></mat-divider>
+            <mat-divider></mat-divider>
+
+        </mat-list-item>
+    </mat-list>
+    <div class="container text-center mt20">
+    <button routerLink="/admin/add-categories" mat-raised-button color="primary">Add Category</button>
+</div>
+</mat-card>

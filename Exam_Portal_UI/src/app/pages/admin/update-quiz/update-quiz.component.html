@@ -1,0 +1,62 @@
+<mat-card *ngIf="quizData">
+    <h1 class="text-center">Update Quiz</h1>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <form action="" (ngSubmit)="updateQuizSubmit()">
+                    <mat-form-field class="w100" appearance="fill">
+                        <mat-label>Enter Title</mat-label>
+                        <input type="text" required name="title" matInput placeholder="Enter Here"
+                            [(ngModel)]="quizData.title" [ngModelOptions]="{standalone: true}">
+                    </mat-form-field>
+
+                    <mat-form-field class="w100" appearance="fill">
+                        <mat-label>Enter Description</mat-label>
+                        <textarea name="description" required="true" [(ngModel)]="quizData.description" matInput
+                            placeholder="Enter Category Description" rows="5"
+                            [ngModelOptions]="{standalone: true}"></textarea>
+                    </mat-form-field>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <mat-form-field class="w100" appearance="fill">
+                                <mat-label>Maximum Marks</mat-label>
+                                <input type="text" required name="maxMarks" matInput placeholder="Enter Here"
+                                    [(ngModel)]="quizData.maxMarks" [ngModelOptions]="{standalone: true}" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+
+                            <mat-form-field class="w100" appearance="fill">
+                                <mat-label>Number Of Quiestion</mat-label>
+                                <input type="text" required name="noOfQuiestion" matInput placeholder="Enter Here"
+                                    [(ngModel)]="quizData.numberOfQuestions" [ngModelOptions]="{standalone: true}" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <mat-slide-toggle [(ngModel)]="quizData.active" [ngModelOptions]="{standalone: true}">Publish
+                        Status</mat-slide-toggle>
+                    <br />
+                    <mat-form-field appearance="fill" class="mt20 w100">
+                        <mat-label>Categories</mat-label>
+                        <mat-select name="category" [(ngModel)]="quizData.category.cid"
+                            [ngModelOptions]="{standalone: true}">
+                            <mat-option *ngFor="let c of categorySelect" [value]="c.cid">
+                                {{c.title}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+
+                    <div class="container text-center mt20">
+                        <button mat-raised-button color="primary">Update</button>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</mat-card>

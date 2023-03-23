@@ -1,0 +1,66 @@
+<mat-card *ngIf="user">
+    <h1 class="text-center">Your Profile Details</h1>
+    <mat-card-content>
+
+        <div class="bootstrap-wrapper">
+
+            <div class="container">
+
+                <div class="container text-center">
+
+                    <img [src]="imageSource" alt="Image Source" class="profile-image">
+                    <h1 class="mt20">Mayur</h1>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-10 offset-md-1">
+                        <table class="table text-center">
+
+                            <tr>
+                                <td>User Name</td>
+                                <td>{{user.username}}</td>
+                            </tr>
+                            <tr>
+                                <td>User Id</td>
+                                <td>{{user.id}}</td>
+                            </tr>
+
+                            <tr>
+                                <td>First Name</td>
+                                <td>{{user.firstName}}</td>
+                            </tr>
+
+                            <tr>
+                                <td>Last Name</td>
+                                <td>{{user.lastName}}</td>
+                            </tr>
+                            <tr *ngIf="user.phone">
+                                <td>Phone</td>
+                                <td>{{user.phone}}</td>
+                            </tr>
+                            <tr>
+                                <td>Role</td>
+                                <td>{{user.profile}}</td>
+                            </tr>
+
+                            <tr>
+                                <td>Status</td>
+                                <td>{{user.enabled ? 'ACTIVE' : 'INACTIVE'}}</td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </mat-card-content>
+    <mat-card-actions class="text-center">
+        <button mat-raised-button color="primary" class="ml530" [routerLink]="'/admin/update-r-user/'+user.id">Update User</button>
+    </mat-card-actions>
+</mat-card>

@@ -1,0 +1,38 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row mt20">
+            <div class="col-md-6 offset-md-3">
+                <mat-card>
+                    <div class="container text-center">
+                        <img src="../../../assets/p1.PNG" alt="">
+                    </div>
+                    <h1 class="text-center"> Login Here !!</h1>
+                    <form (ngSubmit)="formSubmit()" class="text-center" >
+
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>User Name</mat-label>
+                            <input [(ngModel)]='loginData.username' matInput placeholder="Enter Here"
+                                [ngModelOptions]="{standalone: true}">
+                            <mat-hint>Valid User Name !!</mat-hint>
+                        </mat-form-field>
+                        <div>
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>User Password</mat-label>
+                                <input [(ngModel)]='loginData.password' type="password" matInput
+                                    placeholder="Enter Here" [ngModelOptions]="{standalone: true}">
+                            </mat-form-field>
+                        </div>
+
+                        <div class="container text-center">
+                            <button mat-raised-button color="primary" type="submit">Loggin</button>
+                            <button (click)="resetFiled()" mat-raised-button color="accent" class="ml20">Reset</button>
+                        </div>
+
+
+                    </form>
+                </mat-card>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,74 @@
+<div class="bootstrap-wrapper">
+    <div class="container text-center">
+        <div class="row">
+
+            <div class="col-md-10">
+                <mat-card>
+                    <div class="container text-center">
+                        <img [src]="imageSource" alt="Image Source" class="profile-image">
+
+                    </div>
+
+                    <h1 class="text-center">Fill Update Details Here</h1>
+                    <form (ngSubmit)="updateProfileSubmit()" enctype="multipart/form-data">
+
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>User Name</mat-label>
+                            <input required [(ngModel)]='user.username' matInput placeholder="Enter Here"
+                                [ngModelOptions]="{standalone: true}">
+                            <mat-hint>User Name must be uniqe!</mat-hint>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>User Password</mat-label>
+                            <input required [(ngModel)]='user.password' type="password" matInput
+                                placeholder="Enter Here" [ngModelOptions]="{standalone: true}">
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>First Name</mat-label>
+                            <input required [(ngModel)]='user.firstName' matInput placeholder="Enter Here"
+                                [ngModelOptions]="{standalone: true}">
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Last Name</mat-label>
+                            <input required [(ngModel)]='user.lastName' matInput placeholder="Enter Here"
+                                [ngModelOptions]="{standalone: true}">
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Email</mat-label>
+                            <input required [(ngModel)]='user.email' matInput placeholder="Enter Here"
+                                [ngModelOptions]="{standalone: true}">
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Phone Number</mat-label>
+                            <input required [(ngModel)]='user.phone' matInput placeholder="Enter Here"
+                                [ngModelOptions]="{standalone: true}"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                        </mat-form-field>
+
+                        <div class="full-width text-center mb20">
+                            <mat-label class="mr40"><b>Uplode Image</b></mat-label>
+                            <input (change)="selectFile($event)" type="file">
+                        </div>
+
+                        <div class="container text-center">
+                            <button type="submit" mat-raised-button color="primary">Update Profile</button>
+                        </div>
+
+                    </form>
+                </mat-card>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+</div>

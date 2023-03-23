@@ -1,0 +1,19 @@
+<mat-card class="mt20" *ngFor="let u of registeredAllUsers">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+       
+         <mat-card-title>{{u.username}} </mat-card-title>
+        <mat-card-subtitle>{{u.firstName}} {{u.lastName}}</mat-card-subtitle>
+    </mat-card-header>
+    
+    <mat-card-actions>
+        <button class="mr20" mat-stroked-button color="primary" [routerLink]="'/admin/view-r-user/'+u.id">View Profile</button>
+        <button class="mr20" mat-stroked-button color="primary" [routerLink]="'/admin/update-r-user/'+u.id">Update Profile</button>
+        <button class="mr20" mat-stroked-button color="accent" (click)="deletUser(u.id)">Delete Profile</button>
+        <button mat-stroked-button color="primary" [routerLink]="'/admin/quiz/'+u.id">View Result</button>
+
+
+    </mat-card-actions>
+</mat-card>
+
+
