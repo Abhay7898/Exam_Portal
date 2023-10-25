@@ -1,0 +1,475 @@
+{
+	"info": {
+		"_postman_id": "ffde3d8e-399e-4494-b70f-c1fd70ecd9b3",
+		"name": "Exam Portal API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "10657983"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "saveUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"Mayur\",\r\n    \"password\": \"9009001217\",\r\n    \"firstName\": \"Mayur\",\r\n    \"lastName\": \"Gorakhpuria\",\r\n    \"email\": \"Mayur1992g@gmail.com\",\r\n    \"phone\": \"9009001217\",\r\n    \"profile\":\"ADMIN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/user/"
+					},
+					"response": []
+				},
+				{
+					"name": "getUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYXl1ciIsImV4cCI6MTY3NzExMTY1OSwiaWF0IjoxNjc3MDc1NjU5fQ.nFPyCLPRvME3MA1kRsFKqFLLWvyW7HWHGDnpgY0BViQ",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/user/jhHBHhbh"
+					},
+					"response": []
+				},
+				{
+					"name": "getUserByid",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYXl1ciIsImV4cCI6MTY3NzI2OTMzNSwiaWF0IjoxNjc3MjMzMzM1fQ.yh97pvtI5647sf3Ccue7aaYS9kXD6f00PV-y76J3JIs",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/user/one/102"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/user/67"
+					},
+					"response": []
+				},
+				{
+					"name": "currentUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYXl1ciIsImV4cCI6MTY3NzA5Nzc2MCwiaWF0IjoxNjc3MDYxNzYwfQ.l_oAnX6B3N94wpXx1hGUS8La7lF6UzCsCrElMZAeR1M",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/current_user"
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYXl1ciIsImV4cCI6MTY3NzI2MjYxMSwiaWF0IjoxNjc3MjI2NjExfQ.m__-0PO8Cj9S6U7dRaPwc8lwn5-45UuA1BKoL5YvlaY",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/user/all-users"
+					},
+					"response": []
+				},
+				{
+					"name": "updateImage",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYXl1ckciLCJleHAiOjE2NzcxNzkzODIsImlhdCI6MTY3NzE0MzM4Mn0.DW1_8W3FyDDFw0w-vF00urvGbJbaVOJEei1XJ45CHcA",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Mayur Gorakhpuria/Downloads/PIC.jpg"
+								}
+							]
+						},
+						"url": "http://localhost:8080/user/image/3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "getCategory",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYXl1ciIsImV4cCI6MTY3NjcyOTAzNywiaWF0IjoxNjc2NjkzMDM3fQ.7A8lq1lG1qoQPIV7HkswcdI6V--5W9E2kjLhSLQ1SeM",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"GK Practice\",\r\n    \"description\": \"GK test for quiez\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/category/"
+					},
+					"response": []
+				},
+				{
+					"name": "addCategory",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYXl1ciIsImV4cCI6MTY3NjQwMTMxNiwiaWF0IjoxNjc2MzY1MzE2fQ.4hVxl0IE2pqLR4xfv0NnmvHe9YGop81Ij-gJ9PtePRU",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"GK Practice\",\r\n    \"description\": \"GK test for quiez\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/category/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Quiz",
+			"item": [
+				{
+					"name": "addQuiz",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYXl1ciIsImV4cCI6MTY3NjQxMzE3NCwiaWF0IjoxNjc2Mzc3MTc0fQ.EdYBPQJvWISw215FNU1ZO1SFUlq_JHNmXm2Kq0QQnxo",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"C++ Basic\",\r\n    \"description\": \"This quiz containt basic C++ and oops concept\",\r\n    \"maxMarks\": 100,\r\n    \"numberOfQuestions\" : \"20\" ,\r\n    \"category\" :{\r\n        \"cid\": 3\r\n    } \r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/quiz/"
+					},
+					"response": []
+				},
+				{
+					"name": "getQuiz",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYXl1ciIsImV4cCI6MTY3NjcyOTAzNywiaWF0IjoxNjc2NjkzMDM3fQ.7A8lq1lG1qoQPIV7HkswcdI6V--5W9E2kjLhSLQ1SeM",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/quiz/"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteQuiz",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYXl1ciIsImV4cCI6MTY3NjU2NjU1OSwiaWF0IjoxNjc2NTMwNTU5fQ.GTwEPF5hqSm8A458UZrpUHGi7QYVw4UWKvYz5USOCa8",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/quiz/102"
+					},
+					"response": []
+				},
+				{
+					"name": "updateQuiz",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYXl1ciIsImV4cCI6MTY3Njc1NjYwMywiaWF0IjoxNjc2NzIwNjAzfQ.285aQTVRFlWmh72X3eIAicp4dPXSg5pJd8efmPw5LwY",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"qid\": 2,\r\n    \"title\": \"Java Basic\",\r\n    \"description\": \"This quiz containt basic java and oops concept\",\r\n    \"maxMarks\": \"201\",\r\n    \"numberOfQuestions\": \"20\",\r\n    \"category\": {\r\n        \"cid\": 3,\r\n        \"title\": \"Programing Languages\",\r\n        \"description\": \"Programing languye for quiez\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/quiz/"
+					},
+					"response": []
+				},
+				{
+					"name": "getQuizById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYXl1ciIsImV4cCI6MTY3NjQxNDE4OCwiaWF0IjoxNjc2Mzc4MTg4fQ.SBpMoSX7IxiQWtNQmWwt3UQr-4U0zr-JGiBfJOKb7Lo",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/quiz/5"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Question",
+			"item": [
+				{
+					"name": "getQuizQuestion",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYXl1ciIsImV4cCI6MTY3NjQ3NjMzMCwiaWF0IjoxNjc2NDQwMzMwfQ.GVaCOvB9AR9IJT6k6bTQZHPc9FvpH4IkuLRuagH_wvI",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/question/quiz/2"
+					},
+					"response": []
+				},
+				{
+					"name": "getQuestion",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYXl1ciIsImV4cCI6MTY3NjgyMTIzMCwiaWF0IjoxNjc2Nzg1MjMwfQ.tbS1qDIk26ZlZ5Sv3MCJfJ4rJVEl3gnsqWj90gLVnZo",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/question/1"
+					},
+					"response": []
+				},
+				{
+					"name": "addQuestion",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYXl1ciIsImV4cCI6MTY3NjQxNDE4OCwiaWF0IjoxNjc2Mzc4MTg4fQ.SBpMoSX7IxiQWtNQmWwt3UQr-4U0zr-JGiBfJOKb7Lo",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"content\":\" _______ is a superclass of all the Adapter classes\",\r\n\"image\":\"java.png\",\r\n\"option1\":\"ComponentEvent\",\r\n\"option2\":\"Applet\",\r\n\"option3\":\"InputEvent\",\r\n\"option4\":\"Event\",\r\n\"answer\":\"Applet\",\r\n\"quiz\":{\r\n    \"qid\": 2\r\n}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/question/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Generate_Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"Mayur\",\r\n    \"password\" : \"9009001217\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/generate-token"
+			},
+			"response": []
+		}
+	]
+}
