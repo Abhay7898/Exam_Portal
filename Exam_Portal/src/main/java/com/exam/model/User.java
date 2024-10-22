@@ -21,10 +21,14 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Data
 @Entity
 @Table(name = "user")
+@Setter
+@Getter
 public class User implements UserDetails{
 
 	/**
